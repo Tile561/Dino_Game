@@ -92,7 +92,7 @@ exit_button=pygame.image.load('DinoAssets/ui/tile052.png').convert_alpha()
 play_music=pygame.image.load('DinoAssets/ui/tile012.png').convert_alpha()
 stop_music=pygame.image.load('DinoAssets/ui/tile049.png').convert_alpha()
 restart_button=pygame.image.load('DinoAssets/ui/tile003.png').convert_alpha()
-title=pygame.image.load('DinoAssets\logo.png').convert_alpha()
+title=pygame.image.load('DinoAssets/logo.png').convert_alpha()
 
 #load image
 #loads the game's background
@@ -565,7 +565,7 @@ level_fade= ScreenFade(2,BLACK,4)
 death_fade=ScreenFade(2,RED,4)
 
 #load in music/sound effects
-pygame.mixer.music.load('DinoAssets\music\Super Mario RPG - Forest Maze.mp3')
+pygame.mixer.music.load('DinoAssets/music/Super Mario RPG - Forest Maze.mp3')
 pygame.mixer.music.set_volume(0.5)
 pygame.mixer.music.play(-1,0.0,5000)
 jump_fx=pygame.mixer.Sound('DinoAssets/music/208956309.mp3')
