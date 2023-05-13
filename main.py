@@ -5,6 +5,7 @@ from pygame import mixer
 import button
 import random
 import csv
+import random
 
 
 #intalize the pygame
@@ -92,7 +93,7 @@ exit_button=pygame.image.load('DinoAssets/ui/tile052.png').convert_alpha()
 play_music=pygame.image.load('DinoAssets/ui/tile012.png').convert_alpha()
 stop_music=pygame.image.load('DinoAssets/ui/tile049.png').convert_alpha()
 restart_button=pygame.image.load('DinoAssets/ui/tile003.png').convert_alpha()
-title=pygame.image.load('DinoAssets\logo.png').convert_alpha()
+title=pygame.image.load('DinoAssets/logo.png').convert_alpha()
 
 #load image
 #loads the game's background
@@ -141,7 +142,7 @@ BLACK=(0,0,0)
 WHITE=(255,255,255)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
-
+BLUE = (64, 95, 186)
 
 #Title and Icon of the game
 pygame.display.set_caption("DinoGame")
@@ -151,6 +152,7 @@ font=pygame.font.SysFont("arial.ttf", 30)
 def draw_text(text, font, text_col,x,y):
     img = font.render(text, True, text_col)
     screen.blit(img,(x,y))
+
 
 
 #stop the trailing
@@ -365,13 +367,42 @@ class Characters(pygame.sprite.Sprite):
     def draw(self):
         screen.blit(pygame.transform.flip(self.image, self.flip, False), self.rect)
         if self.speaking:
-            npclist=['Get me off this island NOW']
-            for x in npclist:
-                random.choice(npclist)
-                draw_speech(screen,x,(255,255,255), (0,0,0),self.rect.midtop,25)
-            self.speaking=False
-        #draw_speech(screen,"Hello",(255,255,255),(0,0,0),self.rect.midtop, 25
+            dialogue_list = [
+                "Hello, adventurer!",
+                "Beware of what lies ahead.",
+                "The treasure is hidden deep within the forest.",
+                "You have come far, but your journey is not over yet.",
+                "I sense danger lurking in the shadows.",
+                "The key to success is perseverance.",
+                "You possess great potential.",
+                "Remember, bravery is the mark of a true hero.",
+                "May your path be filled with fortune and glory!",
+                "Farewell, and good luck!",
+                "Why did the dinosaur go to the dentist? Because it had a fossil cavity!",
+                "How do you ask a dinosaur to lunch? Tea, Rex?",
+                "What do you call a dinosaur with an extensive vocabulary? A thesaurus!",
+                "Why don't you ever hear a pterodactyl using the bathroom? Because they have silent pees!",
+                "Why did the T-Rex cross the road? Chickens hadn't evolved yet!",
+                "What do you call a sleeping dinosaur? A dino-snore!",
+                "What do you call a dinosaur that's a noisy sleeper? A Bronto-snore-us!",
+                "What kind of dinosaur loves to sleep? A stega-snore-us!",
+                "Why don't dinosaurs ever forget anything? Because they always have their 'thinks' together!",
+                "How does a dinosaur send messages? By using a dino-saurce!"
+                ]
+            if not hasattr(self, "current_dialogue"):
+                self.current_dialogue = random.choice(dialogue_list)
+                self.dialogue_timer = 0
+            draw_speech(screen, self.current_dialogue, (255, 255, 255), (0, 0, 0), self.rect.midtop, 25)
+            self.dialogue_timer += 1
+            if self.dialogue_timer >= 120:  # Change dialogue every 2 seconds (assuming 60 FPS)
+                self.current_dialogue = random.choice(dialogue_list)
+                self.dialogue_timer = 0
+            self.speaking = False
 
+    
+
+
+    
 
 
 
@@ -565,7 +596,7 @@ level_fade= ScreenFade(2,BLACK,4)
 death_fade=ScreenFade(2,RED,4)
 
 #load in music/sound effects
-pygame.mixer.music.load('DinoAssets\music\Super Mario RPG - Forest Maze.mp3')
+pygame.mixer.music.load('DinoAssets/music/Super Mario RPG - Forest Maze.mp3')
 pygame.mixer.music.set_volume(0.5)
 pygame.mixer.music.play(-1,0.0,5000)
 jump_fx=pygame.mixer.Sound('DinoAssets/music/208956309.mp3')
