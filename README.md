@@ -37,14 +37,15 @@ python main.py
 
 ## Controls
 
-- Use the **left arrow key** to move the dinosaur left.
-- Use the **right arrow key** to move the dinosaur right.
-- Use the **up arrow key** to make the dinosaur jump.
+- Use the **W** to move the dinosaur left.
+- Use the **D** to move the dinosaur right.
+- Use the **A** to make the dinosaur jump.
+- Use the **S** to make the dinosaur squat.
 
 ## Gameplay
 
 - The objective of the game is to navigate the dinosaur through each level and reach the exit without losing all health points.
-- Avoid colliding with enemies and obstacles, as they will reduce the dinosaur's health.
+- Avoid colliding with obstacles, as they will reduce the dinosaur's health.
 - Collect items such as health apples, amour plates, and speed necklaces to increase health or gain special abilities.
 - Reach the exit to complete a level and proceed to the next one.
 
