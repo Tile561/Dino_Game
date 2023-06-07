@@ -1,7 +1,6 @@
-```markdown
 # DinoGame
 
-DinoGame is a simple platformer game built using the Pygame library in Python. The objective of the game is to control a character and navigate through different levels, avoiding obstacles and enemies, and collecting items to increase health and abilities.
+DinoGame is a simple platformer game developed using the Pygame library in Python. The game features a dinosaur character navigating through various levels, avoiding obstacles, and collecting items.
 
 ## Prerequisites
 
@@ -12,31 +11,46 @@ DinoGame is a simple platformer game built using the Pygame library in Python. T
 
 1. Clone the repository:
 
-   ```shell
-   git clone https://github.com/your-username/DinoGame.git
-   ```
+```
+git clone https://github.com/your-username/DinoGame.git
+```
 
-2. Install the Pygame library. If you don't have it installed, you can install it using pip:
+2. Change to the project directory:
 
-   ```shell
-   pip install pygame
-   ```
+```
+cd DinoGame
+```
 
-## How to Play
+3. Install the required dependencies:
 
-1. Run the game:
+```
+pip install pygame
+```
 
-   ```shell
-   python main.py
-   ```
+## Usage
 
-2. Use the following controls to play the game:
+To run the game, execute the following command:
 
-   - Move left: Left arrow key
-   - Move right: Right arrow key
-   - Jump: Spacebar
+```
+python main.py
+```
 
-3. Navigate through the levels, avoid obstacles and enemies, and collect items to increase your character's health and abilities.
+## Controls
 
-4. Complete all the levels to win the game.
+- Use the **left arrow key** to move the dinosaur left.
+- Use the **right arrow key** to move the dinosaur right.
+- Use the **up arrow key** to make the dinosaur jump.
+
+## Gameplay
+
+- The objective of the game is to navigate the dinosaur through each level and reach the exit without losing all health points.
+- Avoid colliding with enemies and obstacles, as they will reduce the dinosaur's health.
+- Collect items such as health apples, amour plates, and speed necklaces to increase health or gain special abilities.
+- Reach the exit to complete a level and proceed to the next one.
+
+## Credits
+
+- DinoGame was developed by James Merilien.
+- Background and character assets were sourced from Itch.io.
+- Sound effects were obtained from Mixkit.com.
 
