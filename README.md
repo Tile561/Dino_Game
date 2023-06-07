@@ -16,7 +16,7 @@ DinoGame is a simple platformer game developed using the Pygame library in Pytho
 1. Clone the repository:
 
 ```
-git clone https://github.com/Tile561/DinoGame.git
+git clone https://github.com/Tile561/Dino_Game.git
 ```
 
 2. Change to the project directory:
