@@ -4,6 +4,10 @@ DinoGame is a simple platformer game developed using the Pygame library in Pytho
 
 ## Prerequisites
 
+
+https://github.com/Tile561/Dino_Game/assets/88689946/58366359-e43d-4853-acda-15437387e090
+
+
 - Python 3.x
 - Pygame library
 
