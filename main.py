@@ -87,7 +87,7 @@ MAX_LEVELS=2
 start_intro=False
 
 #load ui
-sound=pygame.image.load('DinoAssets/better with sound.png').convert_alpha()
+sound=pygame.image.load('DinoAssets/ui/better_with_sound.png').convert_alpha()
 play_button=pygame.image.load('DinoAssets/ui/tile001.png').convert_alpha()
 exit_button=pygame.image.load('DinoAssets/ui/tile052.png').convert_alpha()
 play_music=pygame.image.load('DinoAssets/ui/tile012.png').convert_alpha()
